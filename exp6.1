@@ -1,0 +1,34 @@
+class Employee:
+    def __init__(self, name, age, salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
+
+    def __str__(self):
+        return f"{self.name}, {self.age}, ${self.salary}"
+
+# Sample data
+employees = [
+    Employee("Alice", 30, 70000),
+    Employee("Bob", 25, 50000),
+    Employee("Charlie", 35, 60000),
+    Employee("David", 28, 55000)
+]
+
+# Sort by name
+sorted_by_name = sorted(employees, key=lambda emp: emp.name)
+print("\nSorted by Name:")
+for emp in sorted_by_name:
+    print(emp)
+
+# Sort by age
+sorted_by_age = sorted(employees, key=lambda emp: emp.age)
+print("\nSorted by Age:")
+for emp in sorted_by_age:
+    print(emp)
+
+# Sort by salary
+sorted_by_salary = sorted(employees, key=lambda emp: emp.salary)
+print("\nSorted by Salary:")
+for emp in sorted_by_salary:
+    print(emp)
